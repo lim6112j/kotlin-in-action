@@ -29,6 +29,8 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+		// 
+		implementation("ch.qos.logback:logback-classic:1.4.7")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -47,3 +49,8 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+// configurations {
+//     all {
+//         exclude module: 'log4j-slf4j-impl'
+//     }
+// }
