@@ -9,6 +9,7 @@ import org.enums.getMnemonic
 import org.expr.*
 import org.shapes.createRandomRectangle
 import org.example.joinToString
+import org.lambda.*
 
 class App {
   val greeting: String
@@ -71,4 +72,14 @@ fun main() {
 	val lastc = "kotlin".lastChar()
 	println("last char $lastc")
 	println(arrayList.joinToString2())
+	println(people.filter{it.age < 30})
+	val result = mutableListOf<Person>()
+	for (person in people){
+			if(person.age < 30) result.add(person)
+			}
+	println(result)
+	println(people.filter{it.age < 30}.map(Person::name))
+	println(lookForAlice(people))
+//  unknownElements.add(42)
+	println(unknownElements.first())
 }
